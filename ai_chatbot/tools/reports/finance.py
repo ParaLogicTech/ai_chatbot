@@ -153,15 +153,12 @@ def report_accounts_receivable(company=None, report_date=None, customer=None):
 	filters = {
 		"company": company,
 		"report_date": report_date,
-		"ageing_based_on": "Due Date",
-		"range1": 30,
-		"range2": 60,
-		"range3": 90,
-		"range4": 120,
+		"ageing_based_on": "Posting Date",
+		"ageing_range": "30, 60, 90, 120",
 	}
 
 	if customer:
-		filters["party"] = [customer]
+		filters["customer"] = customer
 
 	from erpnext.accounts.report.accounts_receivable.accounts_receivable import execute
 
@@ -207,15 +204,12 @@ def report_accounts_receivable_summary(company=None, report_date=None, customer=
 	filters = {
 		"company": company,
 		"report_date": report_date,
-		"ageing_based_on": "Due Date",
-		"range1": 30,
-		"range2": 60,
-		"range3": 90,
-		"range4": 120,
+		"ageing_based_on": "Posting Date",
+		"ageing_range": "30, 60, 90, 120",
 	}
 
 	if customer:
-		filters["party"] = [customer]
+		filters["customer"] = customer
 
 	from erpnext.accounts.report.accounts_receivable_summary.accounts_receivable_summary import (
 		execute,
