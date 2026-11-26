@@ -4,7 +4,7 @@ authors = [
     { name = "Sanjay Kumar", email = "sanjay.kumar001@gmail.com"}
 ]
 description = "Intelligent AI Chatbot with ERPNext Integration"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
@@ -28,7 +28,7 @@ frappe = ">=15.0.0,<17.0.0"
 
 [tool.ruff]
 line-length = 110
-target-version = "py310"
+target-version = "py311"
 
 [tool.ruff.lint]
 select = [
